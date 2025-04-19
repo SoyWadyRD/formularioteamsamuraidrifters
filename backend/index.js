@@ -23,6 +23,15 @@ app.use('/api/admin', adminRoutes); // Asegúrate de que esta ruta esté registr
 // Servir archivos estáticos del frontend
 app.use(express.static(path.join(__dirname, '../frontend')));
 
+// Rutas para servir las páginas HTML directamente
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend', 'index.html'));
+});
+
+app.get('/admin', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend', 'admin.html'));
+});
+
 // Conexión a MongoDB
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
