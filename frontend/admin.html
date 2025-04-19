@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+    <title>Panel de Administración - TEAM SAMURAI DRIFTERS</title>
+    <!-- Asegúrate de que la ruta sea correcta -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login-section">
+    <h2>Iniciar Sesión</h2>
+    <form id="login-form">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" required>
+
+        <label for="password">Contraseña:</label>
+<div class="password-wrapper">
+  <input type="password" id="password" required>
+  <span class="toggle-password" onclick="togglePassword()">👁️</span>
+</div>
+
+        <button type="button" onclick="login()">Iniciar sesión</button>
+        <p id="login-msg" style="color: red;"></p>
+    </form>
+</div>
+
+<div id="admin-panel" style="display: none;">
+  <h2>Panel de Administración - TEAM SAMURAI DRIFTERS</h2>
+  
+  <div class="table-container">
+    <table id="data-table">
+      <thead>
+        <tr>
+          <th>Nombre Real</th>
+          <th>Nombre del Juego</th>
+          <th>Edad</th>
+          <th>País</th>
+          <th>Tiempo de Juego</th>
+          <th>Hora de Actividad</th>
+          <th>Persona Activa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Las filas se agregarán aquí mediante JavaScript -->
+      </tbody>
+    </table>
+  </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
