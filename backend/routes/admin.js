@@ -1,14 +1,15 @@
 const express = require('express');
 const router = express.Router();
 
-const ADMIN_USERNAME = ['wady', 'jeeruel', 'yensen', 'brayan', 'walter', 'carlos'];
+const ADMIN_USERNAME = ['wady', 'jeeruel', 'yensen', 'brayan', 'walter', 'carlos', 'mateo'];
 const ADMIN_PASSWORD = [
   'Andreslopez26131620',
   'jeeruel342068',
   'yensen603950',
   'brayan306937',
   'walter044858',
-  'carlos894267'
+  'carlos894267',
+  'mateo549310'
 ];
 
 router.post('/login', (req, res) => {
